@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import profileImg from '../assets/profile.jpg';
 
 const roles = [
   'Software Engineer',
@@ -132,7 +133,7 @@ export default function Hero() {
           <div className="avatar-container">
             <div className="avatar-ring" />
             <div className="avatar-ring avatar-ring-2" />
-            <div className="avatar-placeholder">RD</div>
+            <img src={profileImg} alt="Rajasegaran Dhanush" className="avatar-img" />
 
             <div className="float-badge float-badge-1">
               <span>⚛️</span> React Developer
