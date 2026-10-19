@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import './index.css';
 
 import Navbar from './components/Navbar';
+import NetworkBackground from './components/NetworkBackground';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
@@ -45,6 +46,7 @@ export default function App() {
         <div className="bg-orb bg-orb-3" />
       </div>
       <div className="bg-grid" />
+      <NetworkBackground />
 
       {/* Navigation */}
       <Navbar />
