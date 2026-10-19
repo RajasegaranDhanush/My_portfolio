@@ -1,12 +1,18 @@
 import { useState, useEffect } from 'react';
 
+import { items as experience } from '../content/experience.json';
+import { items as certifications } from '../content/certifications.json';
+
+// Optional sections only get a link once they have content
 const navItems = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
+  experience.length > 0 && { label: 'Experience', href: '#experience' },
   { label: 'Education', href: '#education' },
   { label: 'Projects', href: '#projects' },
   { label: 'Achievements', href: '#achievements' },
-];
+  certifications.length > 0 && { label: 'Certifications', href: '#certifications' },
+].filter(Boolean);
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);

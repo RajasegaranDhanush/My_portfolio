@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "icon": "🔐",
+      "color": "purple",
+      "title": "Smart Locker System",
+      "desc": "An IoT-powered smart locker combining hardware sensors with a software dashboard. Enables secure access control, real-time monitoring and remote management through a React-based interface integrated with Firebase.",
+      "tags": ["React", "Firebase", "IoT", "Python", "Hardware"],
+      "github": "https://github.com/RajasegaranDhanush",
+      "featured": true
+    },
+    {
+      "icon": "🎨",
+      "color": "pink",
+      "title": "UI/UX Design Projects",
+      "desc": "A collection of responsive and user-friendly interface designs crafted in Figma. Focused on modern design patterns, accessibility, and pixel-perfect implementations.",
+      "tags": ["Figma", "UI/UX", "Prototyping", "Wireframing"],
+      "github": "https://github.com/RajasegaranDhanush",
+      "featured": false
+    },
+    {
+      "icon": "📱",
+      "color": "cyan",
+      "title": "Mobile App Concept",
+      "desc": "A mobile-first application concept focusing on intuitive navigation and smooth animations. Designed with user experience at the forefront, combining React Native principles with Firebase backend.",
+      "tags": ["React", "Firebase", "CSS", "Mobile-First"],
+      "github": "https://github.com/RajasegaranDhanush",
+      "featured": false
+    },
+    {
+      "icon": "🤖",
+      "color": "green",
+      "title": "Python Automation Tools",
+      "desc": "A suite of Python scripts and Tkinter GUI applications for automating repetitive tasks. Includes file management utilities, data processing scripts, and GUI-based tools.",
+      "tags": ["Python", "Tkinter", "Automation", "GUI"],
+      "github": "https://github.com/RajasegaranDhanush",
+      "featured": false
+    }
+  ]
+}

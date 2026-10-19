@@ -1,0 +1,170 @@
+# Portfolio admin (Sveltia CMS) — open https://<your-site>/admin/
+# Only GitHub accounts with write access to the repo can save changes.
+# Every save is a commit to `main`; Vercel/Netlify then rebuilds the site.
+
+backend:
+  name: github
+  repo: RajasegaranDhanush/My_portfolio
+  branch: main
+
+# Uploaded images / PDFs are committed here and served from /uploads/...
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  - name: portfolio
+    label: Portfolio
+    editor:
+      preview: false
+    files:
+      # ---------- Certifications ----------
+      - name: certifications
+        label: Certifications
+        file: src/content/certifications.json
+        fields:
+          - name: items
+            label: Certificates
+            label_singular: Certificate
+            widget: list
+            add_to_top: true
+            summary: "{{fields.title}} — {{fields.issuer}}"
+            fields:
+              - { name: title, label: Certificate title, widget: string }
+              - { name: issuer, label: Issuing organization, widget: string }
+              - { name: date, label: Issue date, widget: string, required: false, hint: "Same style as the rest of the site, e.g. 10/2026" }
+              - { name: credentialId, label: Credential ID, widget: string, required: false }
+              - { name: url, label: Verification link, widget: string, required: false, hint: "Full URL starting with https://" }
+              - { name: image, label: Certificate image, widget: image, required: false }
+              - { name: file, label: Certificate PDF, widget: file, required: false }
+
+      # ---------- Experience ----------
+      - name: experience
+        label: Experience
+        file: src/content/experience.json
+        fields:
+          - name: items
+            label: Roles
+            label_singular: Role
+            widget: list
+            add_to_top: true
+            summary: "{{fields.role}} — {{fields.organization}}"
+            fields:
+              - { name: role, label: Role / job title, widget: string }
+              - { name: organization, label: Organization, widget: string }
+              - { name: period, label: Dates, widget: string, hint: "e.g. 06/2026 – Present" }
+              - { name: type, label: Type, widget: select, required: false, options: [Internship, Part-time, Full-time, Freelance, Volunteer, Contract] }
+              - { name: location, label: Location, widget: string, required: false }
+              - name: points
+                label: Responsibilities
+                label_singular: Responsibility
+                widget: list
+                required: false
+                field: { name: point, label: Responsibility, widget: string }
+
+      # ---------- Projects ----------
+      - name: projects
+        label: Projects
+        file: src/content/projects.json
+        fields:
+          - name: items
+            label: Projects
+            label_singular: Project
+            widget: list
+            add_to_top: true
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: icon, label: Icon (emoji), widget: string, default: "🚀" }
+              - { name: color, label: Icon color, widget: select, default: purple, options: [purple, pink, cyan, green] }
+              - { name: desc, label: Description, widget: text }
+              - name: tags
+                label: Technologies
+                label_singular: Technology
+                widget: list
+                field: { name: tag, label: Technology, widget: string }
+              - { name: github, label: GitHub repository link, widget: string, required: false }
+              - { name: demo, label: Live demo link, widget: string, required: false }
+              - { name: image, label: Screenshot, widget: image, required: false }
+              - { name: featured, label: Featured, widget: boolean, default: false }
+
+      # ---------- Achievements ----------
+      - name: achievements
+        label: Achievements & Activities
+        file: src/content/achievements.json
+        fields:
+          - name: items
+            label: Achievements
+            label_singular: Achievement
+            widget: list
+            add_to_top: true
+            summary: "{{fields.title}} — {{fields.date}}"
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: icon, label: Icon (emoji), widget: string, default: "🏆" }
+              - { name: org, label: Organization / event, widget: string }
+              - { name: date, label: Date, widget: string, hint: "e.g. 11/2025 – 12/2025" }
+              - { name: desc, label: Description, widget: text }
+
+      # ---------- Skills ----------
+      - name: skills
+        label: Skills
+        file: src/content/skills.json
+        fields:
+          - name: categories
+            label: Skill categories
+            label_singular: Category
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { name: name, label: Category name, widget: string }
+              - { name: icon, label: Icon (emoji), widget: string }
+              - { name: color, label: Color, widget: select, options: [purple, cyan, pink, green] }
+              - name: skills
+                label: Skills
+                label_singular: Skill
+                widget: list
+                field: { name: skill, label: Skill, widget: string }
+          - name: techStack
+            label: Tech stack strip
+            label_singular: Technology
+            widget: list
+            summary: "{{fields.icon}} {{fields.name}}"
+            fields:
+              - { name: icon, label: Icon (emoji), widget: string }
+              - { name: name, label: Name, widget: string }
+
+      # ---------- Education ----------
+      - name: education
+        label: Education
+        file: src/content/education.json
+        fields:
+          - name: items
+            label: Education
+            label_singular: Qualification
+            widget: list
+            add_to_top: true
+            summary: "{{fields.degree}}"
+            fields:
+              - { name: degree, label: Degree / qualification, widget: string }
+              - { name: institution, label: Institution, widget: string }
+              - { name: period, label: Dates, widget: string, hint: "e.g. 01/2025 – 12/2028" }
+              - name: details
+                label: Details
+                label_singular: Detail
+                widget: list
+                required: false
+                field: { name: detail, label: Detail, widget: string }
+
+      # ---------- About stats ----------
+      - name: stats
+        label: About — stats
+        file: src/content/stats.json
+        fields:
+          - name: items
+            label: Stats
+            label_singular: Stat
+            widget: list
+            summary: "{{fields.number}} {{fields.label}}"
+            fields:
+              - { name: number, label: Number, widget: string, hint: "e.g. 5+" }
+              - { name: label, label: Label, widget: string }

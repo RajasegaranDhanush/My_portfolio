@@ -1,3 +1,5 @@
+import { items as stats } from '../content/stats.json';
+
 export default function About() {
   return (
     <section id="about">
@@ -5,22 +7,12 @@ export default function About() {
         {/* Left side – Stats */}
         <div className="reveal">
           <div className="about-stats">
-            <div className="stat-card">
-              <div className="stat-number">2+</div>
-              <div className="stat-label">Years Coding</div>
-            </div>
-            <div className="stat-card">
-              <div className="stat-number">5+</div>
-              <div className="stat-label">Technologies</div>
-            </div>
-            <div className="stat-card">
-              <div className="stat-number">3+</div>
-              <div className="stat-label">Projects</div>
-            </div>
-            <div className="stat-card">
-              <div className="stat-number">1</div>
-              <div className="stat-label">IEEE Event</div>
-            </div>
+            {stats.map((stat) => (
+              <div className="stat-card" key={stat.label}>
+                <div className="stat-number">{stat.number}</div>
+                <div className="stat-label">{stat.label}</div>
+              </div>
+            ))}
           </div>
 
           <div className="about-info-grid" style={{ marginTop: '1.5rem' }}>

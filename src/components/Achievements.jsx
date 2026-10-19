@@ -1,33 +1,4 @@
-const achievements = [
-  {
-    icon: '🏆',
-    title: 'IEEE Tech Workshop',
-    org: 'Vertex, IEEE',
-    date: '11/2025 – 12/2025',
-    desc: 'Participated in IEEE-organized tech workshops and design activities, gaining exposure to cutting-edge engineering concepts and professional networking.',
-  },
-  {
-    icon: '🎓',
-    title: 'Diploma in Professional English',
-    org: 'Tea Leaf Centre for Professional Development',
-    date: '01/2024 – 12/2024',
-    desc: 'Completed a professional English diploma, strengthening communication skills essential for a global engineering career.',
-  },
-  {
-    icon: '💡',
-    title: 'Smart Locker System Contributor',
-    org: 'University of Westminster (IIT)',
-    date: '2025 – Present',
-    desc: 'Actively contributing to a Smart Locker System project that combines IoT hardware with a full-stack software solution.',
-  },
-  {
-    icon: '🌐',
-    title: 'Community Engagement Leader',
-    org: 'Extracurricular Activities',
-    date: '2021 – Present',
-    desc: 'Demonstrated strong leadership and organizational skills through community engagement and event management initiatives.',
-  },
-];
+import { items as achievements } from '../content/achievements.json';
 
 export default function Achievements() {
   return (

@@ -1,44 +1,4 @@
-const skillCategories = [
-  {
-    name: 'Programming Languages',
-    icon: '💻',
-    colorClass: 'purple',
-    skills: ['Python', 'Java', 'JavaScript', 'HTML5', 'CSS3', 'C++'],
-  },
-  {
-    name: 'Frameworks & Tools',
-    icon: '⚛️',
-    colorClass: 'cyan',
-    skills: ['React', 'Firebase', 'Tkinter', 'Git', 'Figma', 'VS Code'],
-  },
-  {
-    name: 'Interests & Domains',
-    icon: '🎯',
-    colorClass: 'pink',
-    skills: ['UI/UX Design', 'Mobile Apps', 'IoT Hardware', 'Cybersecurity', 'Frontend Dev', 'Backend Dev'],
-  },
-  {
-    name: 'Soft Skills',
-    icon: '🌟',
-    colorClass: 'green',
-    skills: ['Teamwork', 'Leadership', 'Communication', 'Community', 'Organization', 'Event Management'],
-  },
-];
-
-const techStack = [
-  { icon: '🐍', name: 'Python' },
-  { icon: '☕', name: 'Java' },
-  { icon: '📜', name: 'JavaScript' },
-  { icon: '⚛️', name: 'React' },
-  { icon: '🌐', name: 'HTML5' },
-  { icon: '🎨', name: 'CSS3' },
-  { icon: '🔥', name: 'Firebase' },
-  { icon: '🐙', name: 'Git' },
-  { icon: '🖥️', name: 'C++' },
-  { icon: '✏️', name: 'Figma' },
-  { icon: '🔌', name: 'IoT' },
-  { icon: '📦', name: 'Tkinter' },
-];
+import { categories as skillCategories, techStack } from '../content/skills.json';
 
 export default function Skills() {
   return (
@@ -55,12 +15,12 @@ export default function Skills() {
         {skillCategories.map((cat) => (
           <div className="skill-category" key={cat.name}>
             <div className="skill-cat-header">
-              <div className={`skill-cat-icon ${cat.colorClass}`}>{cat.icon}</div>
+              <div className={`skill-cat-icon ${cat.color}`}>{cat.icon}</div>
               <span className="skill-cat-name">{cat.name}</span>
             </div>
             <div className="skill-tags">
               {cat.skills.map((skill) => (
-                <span className={`skill-tag ${cat.colorClass}`} key={skill}>
+                <span className={`skill-tag ${cat.color}`} key={skill}>
                   {skill}
                 </span>
               ))}

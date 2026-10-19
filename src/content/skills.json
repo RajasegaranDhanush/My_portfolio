@@ -1,0 +1,42 @@
+{
+  "categories": [
+    {
+      "name": "Programming Languages",
+      "icon": "💻",
+      "color": "purple",
+      "skills": ["Python", "Java", "JavaScript", "HTML5", "CSS3", "C++"]
+    },
+    {
+      "name": "Frameworks & Tools",
+      "icon": "⚛️",
+      "color": "cyan",
+      "skills": ["React", "Firebase", "Tkinter", "Git", "Figma", "VS Code"]
+    },
+    {
+      "name": "Interests & Domains",
+      "icon": "🎯",
+      "color": "pink",
+      "skills": ["UI/UX Design", "Mobile Apps", "IoT Hardware", "Cybersecurity", "Frontend Dev", "Backend Dev"]
+    },
+    {
+      "name": "Soft Skills",
+      "icon": "🌟",
+      "color": "green",
+      "skills": ["Teamwork", "Leadership", "Communication", "Community", "Organization", "Event Management"]
+    }
+  ],
+  "techStack": [
+    { "icon": "🐍", "name": "Python" },
+    { "icon": "☕", "name": "Java" },
+    { "icon": "📜", "name": "JavaScript" },
+    { "icon": "⚛️", "name": "React" },
+    { "icon": "🌐", "name": "HTML5" },
+    { "icon": "🎨", "name": "CSS3" },
+    { "icon": "🔥", "name": "Firebase" },
+    { "icon": "🐙", "name": "Git" },
+    { "icon": "🖥️", "name": "C++" },
+    { "icon": "✏️", "name": "Figma" },
+    { "icon": "🔌", "name": "IoT" },
+    { "icon": "📦", "name": "Tkinter" }
+  ]
+}
