@@ -32,7 +32,7 @@ export default function Contact() {
       <div className="contact-wrapper reveal">
         {/* Left */}
         <div className="contact-info">
-          <h3>Let's Build Something <span style={{ background: 'var(--gradient-primary)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Amazing</span> Together</h3>
+          <h3>Let's Build Something <span style={{ background: 'var(--gradient-text)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Amazing</span> Together</h3>
           <p>
             Whether you're looking for a dedicated intern, a freelance developer, or just want to
             chat about tech — my inbox is always open. I'll do my best to get back to you!
